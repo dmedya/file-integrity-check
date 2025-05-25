@@ -1,26 +1,25 @@
 # Stealer Log Analiz Botu
 
-Bu bot, stealer loglarını (.zip/.rar) otomatik analiz eden bir Telegram botudur. Şüpheli dosyaları tespit eder ve raporlar.
+Telegram üzerinden .zip/.rar dosyalarını analiz eden bir bot.
 
-## 🚀 Test Etmek İçin
+## Kurulum
 
-1. Telegram Grubuna Katıl: [@denemegrubu](https://t.me/denemegrubu)
-2. Gruba bir .zip/.rar dosyası gönder
-3. Bot otomatik olarak analiz edip rapor verecek
+1. Repoyu klonlayın
+2. config.py dosyası oluşturun ve token ekleyin
+3. Gerekli kütüphaneleri yükleyin:
+```bash
+pip install python-telegram-bot
+```
+4. Botu çalıştırın:
+```bash
+python telegram_bot.py
+```
 
-## 🔍 Bot Ne Yapar?
+## Özellikler
 
-- Zip/Rar dosyalarını analiz eder
-- Şüpheli dosyaları tespit eder:
-  * passwords.txt
-  * browsers.log
-  * cookies.txt
-  * wallets.json
-  * telegram_desktop
-  * discord_token.txt
-  * system_info.txt
-- Dosya bilgilerini raporlar
-- Gönderen kişi bilgisini gösterir
+- Zip/Rar analizi
+- Şüpheli dosya tespiti
+- Otomatik raporlama
 
 ## ⚠️ Güvenlik Notu
 
