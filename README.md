@@ -1,52 +1,27 @@
-# File Integrity Checker
+# Stealer Log Analiz Botu
 
-Bu script, belirtilen dizindeki dosyaların bütünlük kontrolünü gerçekleştiren bir bash script'tir.
+Bu bot, stealer loglarını (.zip/.rar) otomatik analiz eden bir Telegram botudur. Şüpheli dosyaları tespit eder ve raporlar.
 
-## Özellikler
+## 🚀 Test Etmek İçin
 
-- SHA256 hash algoritması ile dosya bütünlük kontrolü
-- Yeni eklenen dosyaların tespiti
-- Değiştirilen dosyaların tespiti
-- Silinen dosyaların tespiti
-- Otomatik raporlama
-- Cron uyumlu çalışma
+1. Telegram Grubuna Katıl: [@denemegrubu](https://t.me/denemegrubu)
+2. Gruba bir .zip/.rar dosyası gönder
+3. Bot otomatik olarak analiz edip rapor verecek
 
-## Kurulum
+## 🔍 Bot Ne Yapar?
 
-1. Script'i indirin:
-```bash
-git clone https://github.com/dmedya/file-integrity-check.git
-```
+- Zip/Rar dosyalarını analiz eder
+- Şüpheli dosyaları tespit eder:
+  * passwords.txt
+  * browsers.log
+  * cookies.txt
+  * wallets.json
+  * telegram_desktop
+  * discord_token.txt
+  * system_info.txt
+- Dosya bilgilerini raporlar
+- Gönderen kişi bilgisini gösterir
 
-2. Gerekli dizinleri oluşturun:
-```bash
-sudo mkdir -p /opt/scripts
-sudo cp check_integrity.sh /opt/scripts/
-sudo chmod +x /opt/scripts/check_integrity.sh
-```
+## ⚠️ Güvenlik Notu
 
-3. Cron görevi olarak ekleyin:
-```bash
-sudo crontab -e
-# Aşağıdaki satırı ekleyin:
-0 0 * * * /opt/scripts/check_integrity.sh
-```
-
-## Kullanım
-
-Script ilk çalıştırıldığında baseline oluşturur:
-```bash
-sudo /opt/scripts/check_integrity.sh
-```
-
-Sonraki çalıştırmalarda:
-- Değişiklikleri kontrol eder
-- Sonuçları /opt/scripts/integrity_report.txt dosyasına yazar
-
-## Çıktı Örnekleri
-
-[2024-02-20 00:00:01] Bütünlük Kontrolü Raporu:
-----------------------------------------
-DEĞİŞTİRİLDİ: /opt/scripts/config.sh
-YENİ DOSYA: /opt/scripts/new_script.sh
-SİLİNDİ: /opt/scripts/old_script.sh
+Bu bot sadece eğitim amaçlıdır. Kötüye kullanım yasaktır.
